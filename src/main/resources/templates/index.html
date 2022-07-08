@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Index Page</title>
+  <style type="text/css">
+    #todocontainer {
+      margin-top: 50px;
+    }
+  </style>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+<section id="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">STARTECH'S TODOS APP</a>
+    <button class="navbar-toggler" type="button" data-
+            toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-
+            expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</section>
+<section id="todocontainer">
+  <h2 style="padding-top: 30px; padding-bottom: 20px;"
+      class="text-center">Welcome to Todo Manager</h2>
+  <div class="d-flex justify-content-center">
+    <form th:action="@{/todos}" method="GET"
+          enctype="multipart/form-data">
+      <div class="form-group">
+        <button type="submit" class="btn btn-success
+btn-lg text-white">View Todos</button>
+      </div>
+    </form>
+
+    <form th:action="@{/todoNew}" method="POST"
+          enctype="multipart/form-data">
+      <div class="form-group">
+        <button type="submit" class="btn btn-success
+btn-lg text-white">ADD TODO</button>
+      </div>
+    </form>
+  </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+<script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+></script>
+</body>
+</html>
